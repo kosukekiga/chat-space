@@ -40,15 +40,18 @@
     padding: 20px;
     .group {
       display: inline-block;
-      color: white;
-      text-decoration: none;
       margin-bottom: 40px;
-      &__group-name {
+      a {
+        text-decoration: none;
+      }
+      &__name {
         font-size: 15px;
+        color: white;
         margin-bottom: 5px;
       }
-      &__group-message {
+      &__message {
         font-size: 11px;
+        color: white;
       }
     }
   }
