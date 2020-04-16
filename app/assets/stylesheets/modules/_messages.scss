@@ -38,8 +38,9 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px;
+    overflow: scroll;
     .group {
-      display: inline-block;
+      // display: inline-block;
       margin-bottom: 40px;
       a {
         text-decoration: none;
@@ -98,12 +99,13 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
+    overflow: scroll;
     .message {
       padding-bottom: 40px;
-      &__upper-info {
+      &__upper {
         display: flex;
         margin-bottom: 10px;
-        &__talker {
+        &__user-name {
           color: #333333;
           font-size: 16px;
           font-weight: bold;
@@ -114,7 +116,7 @@
           margin-left: 10px;
         }
       }
-      &__text {
+      &__lower {
         color: #434a54;
         font-size: 14px;
         margin-bottom: 10px;
@@ -125,12 +127,12 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    .new-message {
+    .new_message {
       display: flex;
       .input-box {
         width: 100%;
         position: relative;
-        &__text {
+        &__message {
           height: 50px;
           width: 100%;
           color: #434a54;
