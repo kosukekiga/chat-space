@@ -2,13 +2,10 @@ class UsersController < ApplicationController
 
   def index
     return nil if params[:keyword] == ""
-    @users = User.where('name LIKE ?', "%#{params[:keyword]}%").where.not(id: current_user.id).limit(10)
-    # ajax通信の記述:dataTypeの種類に応じて参照するファイルを切り替える
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
     respond_to do |format|
       format.html
       format.json
-      # ajax記述には、dataType: 'json' と書かれているので
-      # index.json.jbuilderファイルが読み込まれる
     end
   end
   
